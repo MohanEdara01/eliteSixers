@@ -130,3 +130,81 @@
 // Simple:
 // async → fast but no order
 // defer → safe and ordered
+
+//////////////////////////////////////////////////////
+// INTEGRATION OF JAVASCRIPT
+//////////////////////////////////////////////////////
+
+// JavaScript can be added to HTML in 3 ways
+
+
+// -----------------------------------------------
+// WAY 1 - INLINE JAVASCRIPT
+// -----------------------------------------------
+
+// Written directly inside HTML element
+// Used for very small and quick tasks
+// Not recommended for large code
+
+// Example:
+// <button onclick="alert('Hello!')">Click Me</button>
+
+// Simple:
+// JS written inside HTML tag itself
+// Quick but messy for large projects
+
+
+// -----------------------------------------------
+// WAY 2 - INTERNAL JAVASCRIPT
+// -----------------------------------------------
+
+// Written inside <script> tag in same HTML file
+// placed inside <head> or at bottom of <body>
+// Good for small projects or single page scripts
+
+// Example:
+// <html>
+//   <head>
+//     <script>
+//       function greet() {
+//         alert("Hello from Internal JS!");
+//       }
+//     </script>
+//   </head>
+//   <body>
+//     <button onclick="greet()">Click Me</button>
+//   </body>
+// </html>
+
+// Simple:
+// JS written inside <script> tag in same HTML file
+// Better than inline but not best for large projects
+
+
+// -----------------------------------------------
+// WAY 3 - EXTERNAL JAVASCRIPT (BEST PRACTICE)
+// -----------------------------------------------
+
+// JS code written in separate .js file
+// Linked to HTML using <script src=""> tag
+// Best approach for all real projects
+// Code is clean, reusable and easy to maintain
+
+// File: app.js
+//   function greet() {
+//     alert("Hello from External JS!");
+//   }
+
+// File: index.html
+//   <html>
+//     <head>
+//       <script src="app.js" defer></script>
+//     </head>
+//     <body>
+//       <button onclick="greet()">Click Me</button>
+//     </body>
+//   </html>
+
+// Simple:
+// JS written in separate file → linked to HTML
+// Cleanest and most professional approach
